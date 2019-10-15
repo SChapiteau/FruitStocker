@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitStocker", "FruitStocker\FruitStocker.csproj", "{C0F2200A-184B-4487-A8B9-1ED3D148B4B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitStockerAPI", "FruitStocker\FruitStockerAPI.csproj", "{C0F2200A-184B-4487-A8B9-1ED3D148B4B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitStocker.Model", "FruitStocker.Model\FruitStocker.Model.csproj", "{9B2370B0-6F56-4578-B283-7FC2086C690E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C0F2200A-184B-4487-A8B9-1ED3D148B4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0F2200A-184B-4487-A8B9-1ED3D148B4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0F2200A-184B-4487-A8B9-1ED3D148B4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B2370B0-6F56-4578-B283-7FC2086C690E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2370B0-6F56-4578-B283-7FC2086C690E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2370B0-6F56-4578-B283-7FC2086C690E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2370B0-6F56-4578-B283-7FC2086C690E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
