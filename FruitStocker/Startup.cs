@@ -31,7 +31,7 @@ namespace FruitStocker
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddDbContext<FruitStockerContext>(option => option.UseSqlite("Data Source=FruitStock.db"));
+            services.AddDbContext<FruitStockerContext>(option => option.UseSqlite("Data Source=../DataBase/FruitStock.db"));
 
             services.AddSwaggerGen(c =>
             {

@@ -21,6 +21,10 @@ namespace FruitStockerAPI.Controllers
             _context = context;
         }
 
+
+
+
+        #region Old request
         // GET: api/FruitLots
         [HttpGet]
         public IEnumerable<FruitLot> GetFruitLots()
@@ -45,41 +49,6 @@ namespace FruitStockerAPI.Controllers
             }
 
             return Ok(fruitLot);
-        }
-
-        // PUT: api/FruitLots/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutFruitLot([FromRoute] Guid id, [FromBody] FruitLot fruitLot)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != fruitLot.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(fruitLot).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!FruitLotExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
         }
 
         // POST: api/FruitLots
@@ -117,10 +86,6 @@ namespace FruitStockerAPI.Controllers
 
             return Ok(fruitLot);
         }
-
-        private bool FruitLotExists(Guid id)
-        {
-            return _context.FruitLots.Any(e => e.Id == id);
-        }
+        #endregion
     }
 }
