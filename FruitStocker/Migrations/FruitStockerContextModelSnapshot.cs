@@ -18,7 +18,7 @@ namespace FruitStockerAPI.Migrations
 
             modelBuilder.Entity("FruitStocker.Model.Client", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name");
@@ -30,7 +30,7 @@ namespace FruitStockerAPI.Migrations
 
             modelBuilder.Entity("FruitStocker.Model.FruitLot", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("ExpirationDate");
@@ -48,12 +48,12 @@ namespace FruitStockerAPI.Migrations
 
             modelBuilder.Entity("FruitStocker.Model.Order", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid?>("ClientId");
+                    b.Property<int?>("ClientId");
 
-                    b.Property<Guid?>("FruitsId");
+                    b.Property<int?>("FruitsId");
 
                     b.Property<double>("Quantity");
 

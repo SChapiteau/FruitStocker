@@ -11,7 +11,8 @@ namespace FruitStockerAPI.Migrations
                 name: "Clients",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -23,7 +24,8 @@ namespace FruitStockerAPI.Migrations
                 name: "FruitLots",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(nullable: true),
                     QuantityLeft = table.Column<double>(nullable: false),
                     Price = table.Column<decimal>(nullable: false),
@@ -38,9 +40,10 @@ namespace FruitStockerAPI.Migrations
                 name: "Orders",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
-                    ClientId = table.Column<Guid>(nullable: true),
-                    FruitsId = table.Column<Guid>(nullable: true),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ClientId = table.Column<int>(nullable: true),
+                    FruitsId = table.Column<int>(nullable: true),
                     Quantity = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
