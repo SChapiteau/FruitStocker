@@ -35,7 +35,7 @@ namespace FruitStockerAPI.Controllers
                 return new QuoteCommandV1Result()
                 {
                     Type = QuoteCommandV1ResultType.SUCCES,
-                    FinalPrice = fruitLot.Price,
+                    FinalPrice = (fruitLot.Price *1.05M),
                     FruitLotId = fruitLot.Id,
                 };
             }
@@ -75,7 +75,7 @@ namespace FruitStockerAPI.Controllers
 
 
             //Nouvell fonctionnalité
-            //On veux rajouter un nouveau client "Low Cost"
+            //On veux rajouter un nouveau client "Low Cost" qui ne peu prendre que des fruit date + 3jour
 
 
             return null;
